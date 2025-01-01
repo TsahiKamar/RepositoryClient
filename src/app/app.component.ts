@@ -15,7 +15,7 @@ export class AppComponent {
 
   constructor(private readonly userService: UserService,private readonly sessionStorageService:SessionStorageService) {
   
-    //INIT JWT TOKEN
+    //USER ADMIN AUTHENTICATION & INIT JWT TOKEN 
     const req: UserRequest = {username : environment.adminUser,password : environment.pass} 
     this.userService.Authenticate(req).subscribe({
       next: (response) => {
