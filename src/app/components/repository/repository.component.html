@@ -1,0 +1,55 @@
+
+<div class="search-form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title><h3>Repository Search ...</h3></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div>
+            <label class="lbl">Repository Name:</label>
+            <input
+              type="text"
+              formControlName="repositoryName"
+              class="form-control" placeholder="Type repository name ..." required
+              [ngClass]="{ 'is-invalid': submitted && f['repositoryName'].errors }"
+            />
+            <div *ngIf="submitted && f['repositoryName'].errors" class="invalid-feedback">
+              <div *ngIf="f['repositoryName'].errors['required']" [ngStyle]="{color:'red'}">RepositoryName is required</div>
+            </div>
+          </div>
+  
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button mat-flat-button type="submit" [ngStyle]="{background : 'lightskyblue'}">Search ..</button>
+        </mat-card-actions>
+      </mat-card>
+     
+    </form>
+  </div>
+
+  
+<!--##### GALERY SECTION-->  
+<div class="flex-container">
+  <div class="child" *ngFor="let item of items">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Full Name: {{item.full_name}}</mat-card-title>
+        <mat-card-subtitle>Name: {{item.name}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="item.owner.avatar_url" alt="">
+      <mat-card-content>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [ngStyle]="{background : 'gray'}" (click)="bookmarkAdd(item)">Bookmark</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
+
+
+  

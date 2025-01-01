@@ -1,0 +1,48 @@
+/*p {
+    font-family: Lato;
+}*/
+  
+  #root {
+    padding: 30px;
+  }
+  
+  .search-form {
+    max-width: 350px;
+    margin: auto;
+    background-color: lightslategray;
+  }
+  .lbl {
+    margin: 5px;
+  }
+
+  .btn {
+    background : lightskyblue;
+    margin-top: 5px;
+  }
+ 
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-container > div {
+    /*background-color: #f1f1f1;
+    /*margin: 10px;
+    padding: 20px;
+    font-size: 20px;*/
+  }
+
+  .child {
+    flex: 1 0 21%; 
+    margin: 2px;
+    margin-top: 2px;
+    font-size: 16px;
+  }
+
+  .example-card {
+    max-width: 400px;
+    border-color: lightslategray;
+    
+  }
+  
