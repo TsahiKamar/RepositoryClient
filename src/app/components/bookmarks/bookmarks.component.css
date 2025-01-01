@@ -1,0 +1,17 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+ 
+  .child {
+    flex: 1 0 21%; 
+    margin: 2px;
+    margin-top: 2px;
+    font-size: 16px;
+  }
+
+  .example-card {
+    max-width: 400px;
+    border-color: lightslategray;
+    
+  }

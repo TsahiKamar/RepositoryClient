@@ -1,7 +1,4 @@
-/*p {
-    font-family: Lato;
-}*/
-  
+
   #root {
     padding: 30px;
   }
@@ -46,3 +43,32 @@
     
   }
   
+
+
+
+
+  .button {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 auto;
+    width: 15%;
+    padding: 8px;
+    border: 2px solid;
+    border-color: #e7dd84;
+    background-color: rgba(236, 229, 167, 0.2);
+    transition: 0.35s;
+  }
+  .button a, active {
+    text-decoration: none;
+    color: #e7dd84;
+  }
+  .button a:hover {
+    text-decoration: none;
+    color: black;
+  }
+  .button:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+    transition: 0.35s;
+  }

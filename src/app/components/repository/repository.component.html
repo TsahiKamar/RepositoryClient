@@ -1,4 +1,8 @@
 
+<div *ngIf="bookmarks.length>0" class="button">
+  <a [routerLink]="['/bookmarks']" routerLinkActive="active">Goto Bookmarks</a>
+</div>
+
 <div class="search-form">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       

@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RepositoryService } from 'src/app/services/repository.service';
-import { Item, RepositoryResponse } from 'src/app/models/repositoryResponse.model';
+import { Item, IRepositoryResponse } from 'src/app/models/repositoryResponse.model';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SessionStorageService } from 'src/app/services/session-storage.service';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-repository',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,MatCardModule,MatButtonModule],
+  imports: [CommonModule,ReactiveFormsModule,MatCardModule,MatButtonModule,RouterModule],
   templateUrl: './repository.component.html',
   styleUrls: ['./repository.component.css']
 })
 export class RepositoryComponent implements OnInit {
 
-  repo!: RepositoryResponse;
+  repo!: IRepositoryResponse;
   items!:Item[];
   bookmarks:Item[]=[];
 
@@ -47,7 +49,7 @@ export class RepositoryComponent implements OnInit {
   onSubmit = () => {
     this.submitted = true;
  
-    //this.repo ={};
+    this.repo = {} as IRepositoryResponse;
     this.items=[];
  
     if (this.form.invalid) {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
-import { RepositoryResponse } from '../models/repositoryResponse.model';
+import { IRepositoryResponse } from '../models/repositoryResponse.model';
 import { SessionStorageService } from './session-storage.service';
 
 @Injectable({
@@ -19,7 +19,7 @@ export class RepositoryService {
   }
 
   /* REPOSITORY SEARCH */
-  public GetRepositories(searchParam:string): Observable<RepositoryResponse> {  
+  public GetRepositories(searchParam:string): Observable<IRepositoryResponse> {  
      
      //this.token = 'THIS IS A WRONG TOKEN';//401
 
